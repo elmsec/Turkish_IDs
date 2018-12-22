@@ -27,8 +27,7 @@ def is_valid_tc_id(tc_id):
             tenth_digit = (sum(map(int, tc_id[:10:2])) * 7-(
                            sum(map(int, tc_id[1:9:2])))) % 10
             # ..and verify that if it's true or not
-            if tenth_digit == int(tc_id[9]):
-                return True
+            return tenth_digit == int(tc_id[9])
 
     return False
 
@@ -53,22 +52,25 @@ def generate_valid_tc_ids(limit, start=11111111111, print_immediately=False):
 
 def check_args(args=None):
     parser = argparse.ArgumentParser(
-        description='Turkish ID Validator and Generator App',
+        description='Turkish ID Number Validator and Generator App',
         prefix_chars='-',
     )
     parser.add_argument(
         '-v', '--validate',
         metavar='12345678901',
-        help="Validate a number to be sure if it's a valid TC ID num. or not",
+        help=(
+            "Validate a number to be sure that if it's a valid TC ID "
+            "number or not."
+        ),
         type=int,
     )
     parser.add_argument(
         '-g', '--generate',
         metavar='[1, ~]',
         help=(
-            "Generate valid TC IDs up to the limit given with this. "
-            "You have to specify a sample TC ID number with the --start-from "
-            "or -s parameters to start generating new ones from."
+            "Generate valid TC ID numbers up to the limit given with this. "
+            "You must to specify a sample TC ID number with --start-from "
+            "or -s parameter to start generating new TC ID numbers from."
         ),
         type=int
     )
@@ -77,7 +79,7 @@ def check_args(args=None):
         metavar='12345678901',
         help=(
             "Sample TC ID number to start generating new ones from. "
-            "This has to be used with the -g parameter."
+            "This has to be used with the -g/--generate parameter."
         ),
         type=int,
     )
