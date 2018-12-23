@@ -3,6 +3,14 @@ Here to be used with peace of mind in order to validate the given number to be s
 
 \**TC Kimlik No = Turkish ID (Number) = TC ID number*
 
+## Nedir?
+Yerel ve uluslararası tüm projelerde kullanılabilmesi için İngilizce yazılmıştır. TC kimlik numaralarını doğrulamak veya algoritmik test odaklı çeşitli ihtiyaçlar nedeniyle geçerli TC kimlik numaraları oluşturmak için kullanılabilir. Bu ihtiyaçlardan bazıları:
+* Merak
+* Algoritmanın test edilmesi
+* Çeşitli sorgulama veya yazım denetimi işlevleri için hazır bekletilmek üzere geçerli TC kimlik numaraları barındıran bir havuz oluşturulması
+* TC kimlik numaraları arasındaki farkın gözetlenmesi
+
+
 ## How to use this?
 **Note:** `12345678901` is a placeholder for your possible TC ID number(s).
 
