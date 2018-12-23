@@ -1,6 +1,7 @@
 #!/usr/bin/python
 import sys
 import argparse
+import time
 
 # ###############################
 # Eyup Can Elma - https://elma.pw
@@ -35,7 +36,7 @@ def is_valid_tc_id(tc_id):
 def generate_valid_tc_ids(limit, start=11111111111, print_immediately=False):
     """
     By starting from the given number {start}, it generates new and valid
-    TC IDs as much as you specified with the parameter {limit}.
+    TC ID numbers as much as you specified with the parameter {limit}.
     """
     tc_ids = []
     number = start
@@ -46,6 +47,7 @@ def generate_valid_tc_ids(limit, start=11111111111, print_immediately=False):
             if print_immediately:
                 print('=>', number)
 
+            number += 55
         number += 1
     return tc_ids
 
@@ -87,14 +89,14 @@ def check_args(args=None):
     return parser.parse_args()
 
 
-if __name__ == '__main__':
+def main():
     all_args = check_args(sys.argv[1:])
     if all_args.validate:
         TC_ID = all_args.validate
         v = 'a' if is_valid_tc_id(TC_ID) else 'NOT'
 
         print('{tc_id} is {v} valid TC ID number.'.format(tc_id=TC_ID, v=v))
-        sys.exit(0)
+        return 0
     elif all_args.generate:
         if not all_args.start_from:
             print(
@@ -102,9 +104,18 @@ if __name__ == '__main__':
                 'with the -s or --start-from parameter '
                 'so we can generate new ones from.'
                 )
-            sys.exit(2)
+            return 2
 
         generate_valid_tc_ids(all_args.generate, all_args.start_from, True)
     else:
         print('Huh. What should I do?')
-        sys.exit(2)
+        return 2
+
+
+if __name__ == '__main__':
+    start_time = time.time()
+    m = main()
+    end_time = time.time()
+
+    print('Finished in {0:.2f} seconds.'.format(end_time-start_time))
+    sys.exit(m)
