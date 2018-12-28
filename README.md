@@ -8,11 +8,11 @@ Here to be used with peace of mind, in order to;
 \**TC Kimlik No = Turkish ID (Number) = TC ID number*
 
 ## Nedir? (Turkish)
-Yerel ve uluslararası tüm projelerde kullanılabilmesi için İngilizce yazılmıştır. TC kimlik numaralarını doğrulamak veya algoritmik test odaklı çeşitli ihtiyaçlar nedeniyle geçerli TC kimlik numaraları oluşturmak için kullanılabilir. Bu ihtiyaçlardan bazıları:
+Yerel ve uluslararası tüm projelerde kullanılabilmesi için İngilizce yazılmıştır. TC kimlik numaralarını doğrulamak veya algoritmik test odaklı çeşitli ihtiyaçlar nedeniyle geçerli TC kimlik numaraları oluşturmak, akrabaların ve kardeşlerin TC kimlik numaralarını bulmak veya son iki hanesi eksik olan TC kimlik numarasını geri kalanıyla birlikte tahmin etmek için kullanılabilir. Yeni TC kimlik numaralarının oluşturulmak istenmesi aşağıdakilerden dolayı olabilir:
 * Merak
 * Algoritmanın test edilmesi
 * Çeşitli sorgulama veya yazım denetimi işlevleri için hazır bekletilmek üzere geçerli TC kimlik numaraları barındıran bir havuz oluşturulması
-* TC kimlik numaraları arasındaki farkın gözetlenmesi
+* TC kimlik numaraları arasındaki farkın ve sistemin gözetlenmesi
 
 
 ## How to use this?
