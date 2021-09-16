@@ -19,21 +19,21 @@ Yerel ve uluslararası tüm projelerde kullanılabilmesi için İngilizce yazıl
 
 ### To validate the given TC ID number:
 ```
-python turkish_ids.py -v 12345678901
+python main.py -v 12345678901
 ```
 or
 ```
-python turkish_ids.py --validate 12345678901
+python main.py --validate 12345678901
 ```
 
 ### To generate new TC ID numbers:
 Let's say you want to generate 10 new TC ID numbers by starting from the TC ID number **12345678901**. So you can use the commands below:
 ```
-python turkish_ids.py -g 10 -s 12345678901
+python main.py -g 10 -s 12345678901
 ```
 or
 ```
-python turkish_ids.py --generate 10 --start-from 12345678901
+python main.py --generate 10 --start-from 12345678901
 ```
 
 ### To find relatives (including siblings):
@@ -41,28 +41,28 @@ If you want to find your relatives' TC ID numbers, you can use this command. You
 
 For example, in order to find three younger relatives according to the TC ID number 12345678901, use:
 ```
-python turkish_ids.py -yr 3 -s 12345678901
+python main.py -yr 3 -s 12345678901
 ```
 
 It could also be written like this so:
 ```
-python turkish_ids.py -r 3 --younger -s 12345678901
+python main.py -r 3 --younger -s 12345678901
 ```
 
 or like this:
 ```
-python turkish_ids.py --younger --relatives 3 --start-from 12345678901
+python main.py --younger --relatives 3 --start-from 12345678901
 ```
 
 It's your choice.
 
 ### To guess the missing part of a TC ID number with 9 leftmost digits:
 ```
-python turkish_ids.py -f 123456789
+python main.py -f 123456789
 ```
 or
 ```
-python turkish_ids.py --guess 123456789
+python main.py --guess 123456789
 ```
 
 
